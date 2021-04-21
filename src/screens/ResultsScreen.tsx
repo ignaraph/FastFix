@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Contractor } from '../interfaces/contractor';
 import { StackScreenProps } from '@react-navigation/stack';
 
@@ -32,18 +32,21 @@ export const ResultsScreen = ({route, navigation}: Props) => {
       console.error(error)
     }
   }
-
   return (
     <View>
-       {/* Map the array and create an element for each one on useEffect */}
       {contractor.map(
-        contractor =>
+        item =>
         <View>
-         <Text>contractor.type</Text>
-         <Text>contractor.logo</Text>
-         <Text>contractor.name</Text>
-         <Text>contractor.rating</Text>
+          <Text>{item.logo}</Text>
+          <Text>{item.name}</Text>
+          <Text>{item.rating}</Text>
          </View>)}
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+    container: {
+
+    }
+});
