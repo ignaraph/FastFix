@@ -7,7 +7,6 @@ const {contractors} = require('../models/index');
 
 contractorCtrl.getAll = async (req,res) => {
   const contractorType =  req.params.name;
-  // console.log(req.params.name)
   try {
     const result = await contractors.findAll({
       where: {

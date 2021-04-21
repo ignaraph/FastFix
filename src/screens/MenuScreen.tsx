@@ -17,19 +17,27 @@ export const MenuScreen = ({navigation}: Props) => {
         <Text style={styles.btnText}>Favorites</Text>
       </TouchableOpacity>
       <TouchableOpacity
-      onPress={() => navigation.navigate('ResultsScreen')}>
+      onPress={() => navigation.navigate('ResultsScreen', {
+        type: 'Gardener'
+      })}>
         <Text style={styles.btnText}>Gardeners</Text>
       </TouchableOpacity>
       <TouchableOpacity
-      onPress={() => navigation.navigate('ResultsScreen')}>
+      onPress={() => navigation.navigate('ResultsScreen', {
+        type: 'Builder'
+      })}>
         <Text style={styles.btnText} >Builders</Text>
       </TouchableOpacity>
       <TouchableOpacity
-      onPress={() => navigation.navigate('ResultsScreen')}>
+      onPress={() => navigation.navigate('ResultsScreen', {
+        type:'Plumber'
+      })}>
         <Text style={styles.btnText}>Plumbers</Text>
       </TouchableOpacity>
       <TouchableOpacity
-      onPress={() => navigation.navigate('ResultsScreen')}>
+      onPress={() => navigation.navigate('ResultsScreen', {
+        type: 'Electrictian'
+      })}>
         <Text style={styles.btnText}>Electrictians</Text>
       </TouchableOpacity>
       </View>
