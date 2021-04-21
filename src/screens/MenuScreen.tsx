@@ -1,25 +1,35 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import { StackScreenProps } from '@react-navigation/stack';
+import { withSafeAreaInsets } from 'react-native-safe-area-context';
 
-export const MenuScreen = () => {
+
+interface Props extends StackScreenProps<any, any> {};
+
+export const MenuScreen = ({navigation}: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.mainTitle}>What service are you looking for?</Text>
       <View style={styles.btnContainer}>
-      <TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('FavoritesScreen')}>
         <Text style={styles.btnText}>Favorites</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('ResultsScreen')}>
         <Text style={styles.btnText}>Gardeners</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('ResultsScreen')}>
         <Text style={styles.btnText} >Builders</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('ResultsScreen')}>
         <Text style={styles.btnText}>Plumbers</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('ResultsScreen')}>
         <Text style={styles.btnText}>Electrictians</Text>
       </TouchableOpacity>
       </View>
@@ -36,7 +46,9 @@ const styles = StyleSheet.create({
       color: '#FFAA2B',
       textAlign: 'center',
       marginBottom: 300,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      borderBottomWidth: 5,
+      borderBottomColor: '#ecf0f1'
     },
     container: {
       flex: 3,
@@ -49,11 +61,13 @@ const styles = StyleSheet.create({
       fontSize: 45,
       textAlign: 'center',
       marginTop: 40,
-      borderWidth: 10,
+      borderWidth: 7,
       borderRadius: 50,
+      borderColor: '#ecf0f1',
       width: 400,
       paddingTop: 10,
-      backgroundColor: '#FFAA2B'
+      backgroundColor: '#FFAA2B',
+      // height: 0,
     },
 
     btnContainer: {

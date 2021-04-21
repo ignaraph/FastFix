@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     textAlign: 'center',
     fontSize: 20,
-    backgroundColor: '#FFAA2B'
+    backgroundColor: '#FFAA2B',
+    borderColor: '#ecf0f1'
   },
 
   container: {
@@ -61,7 +62,8 @@ const styles = StyleSheet.create({
     padding: 10,
     marginVertical: 50,
     textAlign: 'center',
-    backgroundColor: '#FFAA2B'
+    backgroundColor: '#FFAA2B',
+    borderColor: '#ecf0f1',
   }
 
 });
