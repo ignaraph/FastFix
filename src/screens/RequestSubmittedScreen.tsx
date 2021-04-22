@@ -13,20 +13,7 @@ export const RequestSubmittedScreen = () => {
       duration: 1000,
       useNativeDriver: true
     }).start();
-    // renderText();
   }
-
-  const renderText = () => {
-    Animated.timing(state.opacity, {
-      toValue: 1,
-      delay: 2000,
-      duration: 1000,
-      useNativeDriver: true
-    }).start();
-  }
-
-  // useEffect(() => {
-  // }, [])
 
   return (
     <View style={styles.mainContainer} >
@@ -64,12 +51,5 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontWeight: 'bold'
     }
-
-    // image: {
-    //   width: 400,
-    //   height: 400,
-    //   opacity: 0
-    // }
-
 
 });

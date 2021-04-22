@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState} from 'react'
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
@@ -8,24 +8,32 @@ import { StackScreenProps } from '@react-navigation/stack';
 
 interface Props extends StackScreenProps<any, any> {};
 
-const takePhoto = () => {
-  launchCamera({
-    mediaType: 'photo',
-    cameraType: 'back',
-    quality: 0.5
-
-  }, (res) => console.log(res))
-}
-
-const filmVideo = () => {
-  launchCamera({
-    mediaType: 'video',
-    cameraType: 'back',
-    quality: 0.5
-  }, (res) => console.log(res))
-}
 
 export const RequestFormScreen = ({navigation}:Props) => {
+
+  const takePhoto = () => {
+    launchCamera({
+      mediaType: 'photo',
+      cameraType: 'back',
+      quality: 0.5
+
+    }, (res) => setMedia(res.uri))
+  }
+
+  const filmVideo = () => {
+    launchCamera({
+      mediaType: 'video',
+      cameraType: 'back',
+      quality: 0.5
+    }, (res) => console.log(res))
+  }
+
+  const cancelUpload = () => {
+    setMedia('')
+  }
+
+  const [media,setMedia]:any = useState('')
+
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.mainTitle}>Request a Quote!</Text>
@@ -38,6 +46,19 @@ export const RequestFormScreen = ({navigation}:Props) => {
       />
       </View>
       <Text style={styles.formTitle}>Upload an image or video of the issue</Text>
+      {(media.length)
+        ?
+      <View style={styles.feedbackContainer}>
+      <Text style={styles.imageFeedback}>
+        Upload Succesful!
+      </Text>
+      <Image style={styles.imgFeedback} source={require('../assets/images/feedback.jpg')}/>
+      <TouchableOpacity
+        onPress={cancelUpload}>
+        <Text style={styles.cancelText}>Cancel Upload</Text>
+      </TouchableOpacity>
+      </View>
+        :
       <View style={styles.btnContainer}>
         <TouchableOpacity
         onPress={takePhoto}
@@ -50,12 +71,20 @@ export const RequestFormScreen = ({navigation}:Props) => {
         <Image style={styles.cameraBtn} source={require('../assets/images/videoCameraIcon2.jpg')}/>
         </TouchableOpacity>
       </View>
-      <View style={styles.submitContainer}>
+      }
+      {
+        (media.length)
+        ?
+        <Text></Text>
+        :
+      <View >
         <TouchableOpacity
+        style={styles.submitContainer}
         onPress={() => navigation.navigate('RequestSubmittedScreen')}>
           <Text style={styles.submitBtn}>Submit Request</Text>
         </TouchableOpacity>
         </View>
+      }
       </View>
   )
 }
@@ -101,17 +130,17 @@ const styles = StyleSheet.create({
     },
 
     cameraBtn: {
-      width: 100,
-      height: 100,
+      width: 125,
+      height: 125,
       borderWidth: 20,
       borderRadius: 50,
       marginHorizontal: 10,
     },
 
     submitContainer: {
-      justifyContent: 'flex-end',
+      justifyContent: 'center',
       alignItems: 'center',
-      marginVertical: 160,
+      marginVertical: 80,
     },
 
     submitBtn: {
@@ -122,11 +151,35 @@ const styles = StyleSheet.create({
       borderColor: '#ecf0f1',
       borderWidth: 4,
       textAlign: 'center'
+    },
+
+    feedbackContainer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
+    imageFeedback: {
+      fontSize: 40,
+      color: 'white'
+    },
+
+    imgFeedback: {
+      marginTop: 20,
+      width: 150,
+      height:150,
+    },
+
+    cancelText: {
+      marginTop: 30,
+      fontSize: 30,
+      fontWeight: 'bold',
+      borderRadius: 30,
+      backgroundColor: '#F65A76',
+      padding: 10,
+      borderColor: '#ecf0f1',
+      borderWidth: 4,
+      textAlign: 'center'
     }
-
-
-
-
 
 
 });
