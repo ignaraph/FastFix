@@ -3,6 +3,10 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import Textarea from 'react-native-textarea';
+import { StackScreenProps } from '@react-navigation/stack';
+
+
+interface Props extends StackScreenProps<any, any> {};
 
 const takePhoto = () => {
   launchCamera({
@@ -21,7 +25,7 @@ const filmVideo = () => {
   }, (res) => console.log(res))
 }
 
-export const RequestFormScreen = () => {
+export const RequestFormScreen = ({navigation}:Props) => {
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.mainTitle}>Request a Quote!</Text>
@@ -46,7 +50,8 @@ export const RequestFormScreen = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.submitContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={() => navigation.navigate('RequestSubmittedScreen')}>
           <Text style={styles.submitBtn}>Submit Request</Text>
         </TouchableOpacity>
         </View>
