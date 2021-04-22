@@ -10,7 +10,7 @@ export const MainScreen = ({navigation}: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.mainTitle}>FastFix</Text>
-      <Image style={styles.image} source={require('../assets/logotest.png')}/>
+      {/* <Image style={styles.image} source={require('../assets/logotest.png')}/> */}
       <TextInput style={styles.inputs} placeholder="Username"/>
       <TextInput secureTextEntry={true} style={styles.inputs} placeholder="Password"/>
       <TouchableOpacity
