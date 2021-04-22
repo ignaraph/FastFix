@@ -25,7 +25,7 @@ export const RequestFormScreen = ({navigation}:Props) => {
       mediaType: 'video',
       cameraType: 'back',
       quality: 0.5
-    }, (res) => console.log(res))
+    }, (res) => setMedia(res.uri))
   }
 
   const cancelUpload = () => {
