@@ -29,11 +29,12 @@ export const RequestFormScreen = ({navigation}:Props) => {
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.mainTitle}>Request a Quote!</Text>
-      <Text style={styles.formTitle}>Describe your problem below</Text>
+      {/* <Text style={styles.formTitle}>Describe your problem below</Text> */}
       <View>
       <Textarea
-       containerStyle={styles.textareaContainer}
-       style={styles.textarea}
+      placeholder={"Describe your problem here"}
+      containerStyle={styles.textareaContainer}
+      style={styles.textarea}
       />
       </View>
       <Text style={styles.formTitle}>Upload an image or video of the issue</Text>
@@ -69,8 +70,9 @@ const styles = StyleSheet.create({
       color: '#FFAA2B',
       fontSize: 40,
       textAlign: 'center',
-      marginTop: 10,
+      marginBottom: 20,
       fontWeight: 'bold',
+
     },
 
     formTitle: {
