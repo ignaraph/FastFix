@@ -72,19 +72,15 @@ export const RequestFormScreen = ({navigation}:Props) => {
         </TouchableOpacity>
       </View>
       }
-      {
-        (media.length)
-        ?
-        <Text></Text>
-        :
+
       <View >
         <TouchableOpacity
         style={styles.submitContainer}
         onPress={() => navigation.navigate('RequestSubmittedScreen')}>
-          <Text style={styles.submitBtn}>Submit Request</Text>
+          <Text style={{...styles.submitBtn}}>Submit Request</Text>
         </TouchableOpacity>
         </View>
-      }
+
       </View>
   )
 }
@@ -140,7 +136,7 @@ const styles = StyleSheet.create({
     submitContainer: {
       justifyContent: 'center',
       alignItems: 'center',
-      marginVertical: 80,
+      marginVertical: 30,
     },
 
     submitBtn: {

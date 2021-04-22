@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { Contractor, ContractorInitialState } from '../interfaces/contractor';
 import { StackScreenProps } from '@react-navigation/stack';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 interface MenuParams {
   type: string;
@@ -32,27 +32,19 @@ export const ResultsScreen = ({route, navigation}: Props) => {
     }
   }
   return (
-    <View>
+    <ScrollView style={styles.mainContainer}>
       {contractor.map(
         contractor =>
-        <View style={styles.mainContainer}>
           <TouchableOpacity
+          style={styles.contractorBtn}
           onPress={() => navigation.navigate('RequestFormScreen')}
-          style={styles.btnContainer} >
-          <Text>
-          <Image style={styles.icon} source={require('../assets/images/hammerIcon.png')}/>
-          <Text style={styles.container}>{contractor.name}</Text>
-          <Text style={styles.container}>{contractor.rating}</Text>
-          </Text>
+          >
+          <Image style={styles.btnLogo}  source={require('../assets/images/hammerIcon.png')}/>
+          <Text style={styles.companyName}  >{contractor.name}</Text>
+          <Text style={styles.rating} >{contractor.rating}/5</Text>
           </TouchableOpacity>
-          {/* <TouchableOpacity>
-          <Text></Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-          <Text></Text>
-          </TouchableOpacity> */}
-         </View>)}
-    </View>
+         )}
+    </ScrollView>
   )
 }
 
@@ -61,25 +53,39 @@ const styles = StyleSheet.create({
     backgroundColor: '#333232'
   },
 
-  btnContainer: {
-    backgroundColor: 'orange',
+  contractorBtn: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    alignContent: 'center',
+    flexWrap: 'wrap',
+    height: 180,
+    backgroundColor: '#FFAA2B',
+    borderWidth: 5,
+    borderColor: '#ecf0f1',
+    borderRadius: 50,
     marginVertical: 10,
-
+    marginHorizontal: 10,
   },
 
-  container: {
-    textAlign: 'center',
-    width: 500,
-    marginBottom: 50
+  btnLogo: {
+    width: 140,
+    height: 140,
+    position: 'absolute',
+    top: 25,
+   },
+
+  companyName: {
+    position: 'absolute',
+    fontSize: 30,
+    marginLeft: 125,
+    top: 40,
+    fontWeight: 'bold',
   },
 
-  icon: {
-    width: 200,
-    height: 200,
-    // paddingBottom: 100,
-
+  rating: {
+    position: 'absolute',
+    fontWeight: 'bold',
+    fontSize: 30,
+    right: 50,
+    bottom: 15
   }
+
 });
