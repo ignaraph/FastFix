@@ -44,7 +44,7 @@ export const ResultsScreen = ({route, navigation}: Props) => {
           onPress={() => navigation.navigate('RequestFormScreen')}
           style={styles.btnContainer} >
           <Text>
-          {/* <Image style={styles.icon} source={require('../assets/images/hammerIcon.png')}/> */}
+          <Image style={styles.icon} source={require('../assets/images/hammerIcon.png')}/>
           <Text style={styles.container}>{item.name}</Text>
           <Text style={styles.container}>{item.rating}</Text>
           </Text>

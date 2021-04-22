@@ -1,6 +1,16 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+
+const takePhoto = () => {
+  launchCamera({
+    mediaType: 'photo',
+    cameraType: 'back',
+    quality: 0.5
+
+  }, (resp) => console.log(resp))
+}
 
 export const RequestFormScreen = () => {
   return (
@@ -12,8 +22,10 @@ export const RequestFormScreen = () => {
       </View>
       <Text style={styles.formText}>Upload an image or video of the issue</Text>
       <View>
-        <TouchableOpacity>
-
+        <TouchableOpacity
+        onPress={takePhoto}
+        >
+        <Image source={require('../assets/images/uploadIcon.jpg')}/>
         </TouchableOpacity>
       </View>
       </View>
