@@ -1,7 +1,6 @@
 import React from 'react'
 import { TouchableOpacity} from 'react-native-gesture-handler'
 import { StyleSheet, Text, Image, View } from 'react-native';
-import { StackScreenProps } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 
 export const ContractorComponent = ({params,contractor}: any) => {
@@ -15,9 +14,13 @@ export const ContractorComponent = ({params,contractor}: any) => {
           {(function(){
             switch (params.type) {
               case 'Builder':
-             return <Image style={styles.btnLogo}  source={require('../assets/images/hammerIcon.png')}/>
+                return <Image style={styles.btnLogo}  source={require('../assets/images/hammerIcon.png')}/>
               case 'Plumber':
-             return <Image style={styles.btnLogo}  source={require('../assets/images/wrenchIcon.png')}/>
+                return <Image style={styles.btnLogo}  source={require('../assets/images/wrenchIcon.png')}/>
+              case 'Electrician':
+                return <Image style={styles.btnLogo} source={require('../assets/images/electrictianIcon.png')}/>
+              case 'Gardener':
+                return <Image style={styles.btnLogo} source={require('../assets/images/shovelIcon.png')}/>
             }
           })()}
           </View>
@@ -53,10 +56,11 @@ const styles = StyleSheet.create({
   },
 
   btnLogo: {
-    width: 140,
+    alignSelf:'center',
     height: 140,
-    alignSelf: 'center'
-   },
+    width:140
+  },
+
 
   companyName: {
     flex: 1,

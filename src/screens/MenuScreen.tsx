@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { StackScreenProps } from '@react-navigation/stack';
-import { withSafeAreaInsets } from 'react-native-safe-area-context';
 
 
 interface Props extends StackScreenProps<any, any> {};
@@ -18,27 +17,27 @@ export const MenuScreen = ({navigation}: Props) => {
       </TouchableOpacity>
       <TouchableOpacity
       onPress={() => navigation.navigate('ResultsScreen', {
-        type: 'Gardener'
-      })}>
-        <Text style={styles.btnText}>Gardeners</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-      onPress={() => navigation.navigate('ResultsScreen', {
         type: 'Builder'
       })}>
         <Text style={styles.btnText} >Builders</Text>
       </TouchableOpacity>
       <TouchableOpacity
       onPress={() => navigation.navigate('ResultsScreen', {
-        type:'Plumber'
+        type: 'Electrician'
       })}>
-        <Text style={styles.btnText}>Plumbers</Text>
+        <Text style={styles.btnText}>Electricians</Text>
       </TouchableOpacity>
       <TouchableOpacity
       onPress={() => navigation.navigate('ResultsScreen', {
-        type: 'Electrictian'
+        type: 'Gardener'
       })}>
-        <Text style={styles.btnText}>Electrictians</Text>
+        <Text style={styles.btnText}>Gardeners</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('ResultsScreen', {
+        type:'Plumber'
+      })}>
+        <Text style={styles.btnText}>Plumbers</Text>
       </TouchableOpacity>
       </View>
     </View>
