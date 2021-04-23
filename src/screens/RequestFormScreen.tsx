@@ -8,8 +8,14 @@ import { StackScreenProps } from '@react-navigation/stack';
 
 interface Props extends StackScreenProps<any, any> {};
 
+interface MenuParams {
+  name: string;
+}
 
-export const RequestFormScreen = ({navigation}:Props) => {
+
+export const RequestFormScreen = ({route, navigation}:Props) => {
+
+  const params = route.params as MenuParams;
 
   const takePhoto = () => {
     launchCamera({
@@ -36,8 +42,8 @@ export const RequestFormScreen = ({navigation}:Props) => {
 
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.mainTitle}>Request a Quote!</Text>
-      {/* <Text style={styles.formTitle}>Describe your problem below</Text> */}
+      <Text style={styles.mainTitle}>Request a Quote to:  </Text>
+      <Text style={styles.mainTitle}>{params.name}</Text>
       <View>
       <Textarea
       placeholder={"Describe your problem here"}

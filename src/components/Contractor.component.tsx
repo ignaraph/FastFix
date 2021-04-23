@@ -1,14 +1,26 @@
-import React from 'react'
-import { TouchableOpacity} from 'react-native-gesture-handler'
+import React, {useState} from 'react'
+import { TouchableOpacity} from 'react-native'
 import { StyleSheet, Text, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Contractor } from '../interfaces/contractor';
 
 export const ContractorComponent = ({params,contractor}: any) => {
   const navigation =  useNavigation()
+
+  const [favorites, setFavorites] = useState<Contractor[]>([])
+
+  const addToFavorites = (contractor:Contractor):void => {
+    console.log(favorites);
+    setFavorites([...favorites, contractor])
+  }
+
   return (
+      <View>
       <TouchableOpacity
           style={styles.contractorBtn}
-          onPress={() => navigation.navigate('RequestFormScreen')}
+          onPress={() => navigation.navigate('RequestFormScreen', {
+            name: contractor.name
+          })}
           >
           <View >
           {(function(){
@@ -29,6 +41,7 @@ export const ContractorComponent = ({params,contractor}: any) => {
             <Text style={styles.rating} >{contractor.rating}/5</Text>
           </View>
           </TouchableOpacity>
+        </View>
   )
 }
 
@@ -76,7 +89,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'right',
     width: '100%'
+  },
 
+  favBtn: {
+    fontSize: 80,
   }
 
 });
