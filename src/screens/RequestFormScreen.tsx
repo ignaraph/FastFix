@@ -51,10 +51,9 @@ export const RequestFormScreen = ({route, navigation}:Props) => {
       style={styles.textarea}
       />
       </View>
-      <Text style={styles.formTitle}>Upload an image or video of the issue</Text>
       {(media.length)
         ?
-      <View style={styles.feedbackContainer}>
+        <View style={styles.feedbackContainer}>
       <Text style={styles.imageFeedback}>
         Upload Succesful!
       </Text>
@@ -65,7 +64,8 @@ export const RequestFormScreen = ({route, navigation}:Props) => {
       </TouchableOpacity>
       </View>
         :
-      <View style={styles.btnContainer}>
+        <View style={styles.btnContainer}>
+        <Text style={styles.formTitle}>Upload an image or video of the issue</Text>
         <TouchableOpacity
         onPress={takePhoto}
         >
@@ -129,6 +129,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       flexDirection: 'row',
+      flexWrap: 'wrap',
     },
 
     cameraBtn: {
