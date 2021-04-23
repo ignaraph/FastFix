@@ -99,11 +99,14 @@ const styles = StyleSheet.create({
 
     mainTitle: {
       color: '#FFAA2B',
-      fontSize: 40,
+      fontSize: 35,
       textAlign: 'center',
       marginBottom: 20,
-      fontWeight: 'bold',
-
+      paddingBottom: 20,
+      paddingHorizontal: 20,
+      fontFamily: 'ZenDots-Regular',
+      borderBottomWidth: 5,
+      borderColor: '#ecf0f1'
     },
 
     formTitle: {
@@ -150,10 +153,12 @@ const styles = StyleSheet.create({
       fontSize: 30,
       borderRadius: 30,
       backgroundColor: '#FFAA2B',
-      padding: 10,
+      padding: 20,
       borderColor: '#ecf0f1',
       borderWidth: 4,
-      textAlign: 'center'
+      textAlign: 'center',
+      fontFamily: 'ZenDots-Regular'
+
     },
 
     feedbackContainer: {
@@ -162,26 +167,29 @@ const styles = StyleSheet.create({
     },
 
     imageFeedback: {
+      marginTop: 10,
       fontSize: 40,
-      color: 'white'
+      color: '#FFAA2B',
+      fontFamily: 'ZenDots-Regular'
+
     },
 
     imgFeedback: {
       marginTop: 20,
-      width: 150,
-      height:150,
+      width: 120,
+      height:120,
     },
 
     cancelText: {
       marginTop: 30,
       fontSize: 30,
-      fontWeight: 'bold',
       borderRadius: 30,
       backgroundColor: '#F65A76',
-      padding: 10,
+      padding: 20,
       borderColor: '#ecf0f1',
       borderWidth: 4,
-      textAlign: 'center'
+      textAlign: 'center',
+      fontFamily: 'ZenDots-Regular'
     }
 
 

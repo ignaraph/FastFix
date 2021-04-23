@@ -52,7 +52,7 @@ export const ResultsScreen = ({route, navigation}: Props) => {
       </TouchableOpacity>
       {(sortContractor === false)
         ?
-          contractor.map(
+          contractor.sort((a,b)=> a.rating - b.rating).map(
             contractor =>
             <ContractorComponent params={params} contractor={contractor}/>
           )

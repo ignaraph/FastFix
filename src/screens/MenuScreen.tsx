@@ -11,10 +11,7 @@ export const MenuScreen = ({navigation}: Props) => {
     <View style={styles.container}>
       <Text style={styles.mainTitle}>What service are you looking for?</Text>
       <View style={styles.btnContainer}>
-      <TouchableOpacity
-      onPress={() => navigation.navigate('FavoritesScreen')}>
-        <Text style={styles.btnText}>Favorites</Text>
-      </TouchableOpacity>
+
       <TouchableOpacity
       onPress={() => navigation.navigate('ResultsScreen', {
         type: 'Builder'
@@ -39,6 +36,10 @@ export const MenuScreen = ({navigation}: Props) => {
       })}>
         <Text style={styles.btnText}>Plumbers</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('FavoritesScreen')}>
+        <Text style={{...styles.btnText, backgroundColor:'#ff4757'}}>Favorites</Text>
+      </TouchableOpacity>
       </View>
     </View>
   )
@@ -48,14 +49,14 @@ const styles = StyleSheet.create({
     mainTitle: {
       position: 'absolute',
       top: 30,
-      fontSize: 40,
-      fontFamily: 'Monospace',
+      fontSize: 32,
       color: '#FFAA2B',
       textAlign: 'center',
       marginBottom: 300,
-      fontWeight: 'bold',
+      paddingBottom:8,
       borderBottomWidth: 5,
-      borderBottomColor: '#ecf0f1'
+      borderBottomColor: '#ecf0f1',
+      fontFamily: 'ZenDots-Regular'
     },
     container: {
       flex: 3,
@@ -65,14 +66,15 @@ const styles = StyleSheet.create({
     },
 
     btnText: {
-      fontSize: 45,
+      fontSize: 35,
+      fontFamily: 'ZenDots-Regular',
       textAlign: 'center',
       marginTop: 40,
       borderWidth: 7,
       borderRadius: 50,
       borderColor: '#ecf0f1',
       width: 400,
-      paddingTop: 10,
+      padding: 25,
       backgroundColor: '#FFAA2B',
       // height: 0,
     },

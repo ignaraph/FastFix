@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     backgroundColor: '#FFAA2B',
-    borderColor: '#ecf0f1'
+    borderColor: '#ecf0f1',
+    fontWeight: 'bold'
   },
 
   container: {
@@ -48,10 +49,9 @@ const styles = StyleSheet.create({
   mainTitle: {
     position: 'absolute',
     top: 30,
-    fontSize: 50,
-    fontFamily: 'Monospace',
+    fontSize: 80,
+    fontFamily: "FasterOne-Regular",
     color: '#FFAA2B',
-    fontWeight: 'bold'
   },
 
   loginBtn: {
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     backgroundColor: '#FFAA2B',
     borderColor: '#ecf0f1',
+    fontWeight: 'bold'
   }
 
 });

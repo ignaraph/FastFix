@@ -47,9 +47,10 @@ const styles = StyleSheet.create({
 
     submittedText: {
       color: '#FFAA2B',
-      fontSize: 30,
+      fontSize: 35,
       textAlign: 'center',
-      fontWeight: 'bold'
+      fontFamily: 'ZenDots-Regular',
+      padding: 20,
     }
 
 });

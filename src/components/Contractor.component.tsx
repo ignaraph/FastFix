@@ -46,10 +46,6 @@ export const ContractorComponent = ({params,contractor}: any) => {
 }
 
 const styles = StyleSheet.create({
-  mainContainer: {
-
-  },
-
   contractorBtn: {
     justifyContent: 'space-between',
     flexDirection: 'row',
@@ -79,14 +75,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexWrap: 'wrap',
     fontSize: 30,
-    fontWeight: 'bold',
+    fontFamily: 'ZenDots-Regular',
     width: '100%',
-    textAlign: 'right'
+    textAlign: 'center',
   },
 
   rating: {
-    fontWeight: 'bold',
-    fontSize: 30,
+    fontFamily: 'ZenDots-Regular',
+    fontSize: 22,
     textAlign: 'right',
     width: '100%'
   },
