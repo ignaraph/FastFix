@@ -1,1 +1,0 @@
-export const WEB_CLIENT_ID = '151572455749-2ee9aiounho05rnsca29t700b1emb2i7.apps.googleusercontent.com'
