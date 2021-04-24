@@ -26,7 +26,7 @@ export const ResultsScreen = ({route, navigation}: Props) => {
   // 192.168.1.194 This is Codeworks
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://192.168.1.194:3002/${params.type}`)
+      const response = await fetch(`http://192.168.1.24:3002/${params.type}`)
       const result = await response.json();
       setContractor(result)
     } catch (error) {
