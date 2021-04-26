@@ -13,7 +13,7 @@ interface ResultsParams {
 
 interface Props extends StackScreenProps<any, any>{};
 
-export const ResultsScreen = ({route, navigation}: any) => {
+export const ResultsScreen = ({route}:any, {navigation}:Props) => {
 
   const params = route.params as ResultsParams
 

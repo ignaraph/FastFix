@@ -11,6 +11,8 @@ export const MenuScreen = () => {
   const [favorites, setFavorites] = useState([])
   const navigation = useNavigation()
 
+  console.log(favorites);
+
   return (
     <View style={styles.container}>
     <Text style={styles.mainTitle}>What service are you looking for?</Text>
@@ -93,7 +95,6 @@ const styles = StyleSheet.create({
     width: 400,
     padding: 25,
     backgroundColor: '#FFAA2B',
-    // height: 0,
   },
 
   btnContainer: {

@@ -11,6 +11,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { StackNavigator } from './src/navigator/StackNavigator';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StackScreenProps } from '@react-navigation/stack';
+import { FavoriteProviders } from './src/context/FavoritesContext';
 
 // interface Props extends StackScreenProps<any, any> {};
 
@@ -68,14 +69,24 @@ export const App = (/*{navigation}: Props*/) => {
 
   return (
     <NavigationContainer>
+      <AppState>
       {/* <TouchableOpacity onPress={signOut}>
         <Text style={{fontSize: 30, width: '50%', backgroundColor:'red'}}>Logout</Text>
       </TouchableOpacity> */}
       <StackNavigator/>
+      </AppState>
     </NavigationContainer>
 
   )
 };
+
+const AppState = ({children}: any) => {
+  return (
+    <FavoriteProviders>
+      {children}
+    </FavoriteProviders>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {

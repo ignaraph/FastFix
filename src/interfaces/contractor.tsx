@@ -1,6 +1,6 @@
 
 export interface Contractor {
-  id: number;
+  id?: number;
   logo: string;
   name: string;
   rating: number;

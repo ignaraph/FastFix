@@ -1,21 +1,20 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react'
 import { TouchableOpacity} from 'react-native'
 import { StyleSheet, Text, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { FavoritesContext } from '../context/FavoritesContext';
 
-export const ContractorComponent = ({params,contractor}: any) => {
+export const ContractorComponent = ({params, contractor}:any) => {
+  // console.log(contractor);
   const navigation =  useNavigation()
 
-  const addToFavorites = (contractor:any):void => {
-    console.log(contractor);
-    params.setFavorites([...params.favorites, contractor])
-    console.log(params.favorites);
-  }
+  //Making use of the addToFavorites function from context
+  const {addToFavorites} = useContext(FavoritesContext)
 
   return (
       <View>
         <TouchableOpacity onPress={() => addToFavorites(contractor)}>
-          <Text style={{fontSize: 30}}>+</Text>
+          <Text style={{fontSize: 50}}>+</Text>
         </TouchableOpacity>
       <TouchableOpacity
           style={styles.contractorBtn}
@@ -38,7 +37,7 @@ export const ContractorComponent = ({params,contractor}: any) => {
           })()}
           </View>
           <View style={styles.companyDetails}>
-            <Text style={styles.companyName} >{contractor.name}</Text>
+            <Text style={styles.companyName}>{contractor.name}</Text>
             <Text style={styles.rating} >{contractor.rating}/5</Text>
           </View>
           </TouchableOpacity>
