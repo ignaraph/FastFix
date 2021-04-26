@@ -11,7 +11,7 @@ const Stack = createStackNavigator()
 /*headerMode='none'*/
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator headerMode={'none'}>
+    <Stack.Navigator headerMode='none'>
       <Stack.Screen name="MainScreen" component={MainScreen} />
       <Stack.Screen name="MenuScreen" component={MenuScreen} />
       <Stack.Screen name="ResultsScreen" component={ResultsScreen} />

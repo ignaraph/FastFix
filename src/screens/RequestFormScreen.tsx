@@ -114,6 +114,8 @@ const styles = StyleSheet.create({
       fontSize: 35,
       textAlign: 'center',
       marginVertical: 20,
+      fontFamily: 'ZenDots-Regular',
+
     },
 
     textareaContainer: {

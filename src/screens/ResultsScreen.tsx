@@ -5,15 +5,17 @@ import { ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import { ContractorComponent } from '../components/Contractor.component';
 import { Image, View } from 'react-native';
 
-interface MenuParams {
+interface ResultsParams {
   type: string;
+  favorites: [];
+  setFavorites: any;
 }
 
 interface Props extends StackScreenProps<any, any>{};
 
-export const ResultsScreen = ({route, navigation}: Props) => {
+export const ResultsScreen = ({route, navigation}: any) => {
 
-  const params = route.params as MenuParams
+  const params = route.params as ResultsParams
 
   const [contractor, setContractor] =  useState<Contractor[]>([ContractorInitialState])
   const [sortContractor, setSortContractor] = useState(false)
@@ -54,12 +56,12 @@ export const ResultsScreen = ({route, navigation}: Props) => {
         ?
           contractor.sort((a,b)=> a.rating - b.rating).map(
             contractor =>
-            <ContractorComponent params={params} contractor={contractor}/>
+            <ContractorComponent key={contractor.id} params={params} contractor={contractor}/>
           )
         :
         contractor.sort((a,b) => b.rating - a.rating).map(
           contractor =>
-            <ContractorComponent params={params} contractor={contractor}/>
+            <ContractorComponent key={contractor.id}  params={params} contractor={contractor}/>
         )
         }
     </ScrollView>

@@ -2,20 +2,21 @@ import React, {useState} from 'react'
 import { TouchableOpacity} from 'react-native'
 import { StyleSheet, Text, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Contractor } from '../interfaces/contractor';
 
 export const ContractorComponent = ({params,contractor}: any) => {
   const navigation =  useNavigation()
 
-  const [favorites, setFavorites] = useState<Contractor[]>([])
-
-  const addToFavorites = (contractor:Contractor):void => {
-    console.log(favorites);
-    setFavorites([...favorites, contractor])
+  const addToFavorites = (contractor:any):void => {
+    console.log(contractor);
+    params.setFavorites([...params.favorites, contractor])
+    console.log(params.favorites);
   }
 
   return (
       <View>
+        <TouchableOpacity onPress={() => addToFavorites(contractor)}>
+          <Text style={{fontSize: 30}}>+</Text>
+        </TouchableOpacity>
       <TouchableOpacity
           style={styles.contractorBtn}
           onPress={() => navigation.navigate('RequestFormScreen', {

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "151572455749-s2ho47o0lq6hnlkfepf95oho11k3bunh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.toolify",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
           "client_id": "151572455749-2ee9aiounho05rnsca29t700b1emb2i7.apps.googleusercontent.com",
           "client_type": 3
         }
