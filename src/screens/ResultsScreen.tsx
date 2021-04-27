@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Contractor, ContractorInitialState } from '../interfaces/contractor';
 import { StackScreenProps } from '@react-navigation/stack';
 import { ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import { ContractorComponent } from '../components/Contractor.component';
 import { Image, View } from 'react-native';
+import { FavoritesContext } from '../context/FavoritesContext';
 
 interface ResultsParams {
   type: string;
@@ -14,6 +15,9 @@ interface ResultsParams {
 interface Props extends StackScreenProps<any, any>{};
 
 export const ResultsScreen = ({route}:any, {navigation}:Props) => {
+
+  let {myFavorites} = useContext(FavoritesContext)
+
 
   const params = route.params as ResultsParams
 
@@ -56,12 +60,13 @@ export const ResultsScreen = ({route}:any, {navigation}:Props) => {
         ?
           contractor.sort((a,b)=> a.rating - b.rating).map(
             contractor =>
-            <ContractorComponent key={contractor.id} params={params} contractor={contractor}/>
+            <ContractorComponent key={contractor.id} params={params} contractor={contractor} added={myFavorites.find(({id}) => id === contractor.id)}/>
           )
         :
         contractor.sort((a,b) => b.rating - a.rating).map(
           contractor =>
-            <ContractorComponent key={contractor.id}  params={params} contractor={contractor}/>
+            <ContractorComponent key={contractor.id}  params={params} contractor={contractor}
+            added={myFavorites.find(({id}) => id === contractor.id)}/>
         )
         }
     </ScrollView>

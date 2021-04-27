@@ -54,9 +54,7 @@ export const MenuScreen = () => {
       <Text style={styles.btnText}>Plumbers</Text>
     </TouchableOpacity>
     <TouchableOpacity
-    onPress={() => navigation.navigate('FavoritesScreen', {
-      favorites
-    })}>
+    onPress={() => navigation.navigate('FavoritesScreen')}>
       <Text style={{...styles.btnText, backgroundColor:'#ff4757'}}>Favorites</Text>
     </TouchableOpacity>
     </View>

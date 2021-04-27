@@ -1,27 +1,40 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { TouchableOpacity} from 'react-native'
 import { StyleSheet, Text, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { FavoritesContext } from '../context/FavoritesContext';
+import { Contractor } from '../interfaces/contractor';
 
-export const ContractorComponent = ({params, contractor}:any) => {
-  // console.log(contractor);
+export const ContractorComponent = ({params, contractor, added}:any) => {
+
   const navigation =  useNavigation()
-
   //Making use of the addToFavorites function from context
-  const {addToFavorites} = useContext(FavoritesContext)
+  let {addToFavorites, removeFromFavorites} = useContext(FavoritesContext)
+  console.log(added);
+  const addFavorite = (contractor:Contractor,added:boolean) => {
+    addToFavorites(contractor,added)
+  }
+
+  // const addedInput = addToFavorites(contractor)
+
 
   return (
       <View>
-        <TouchableOpacity onPress={() => addToFavorites(contractor)}>
-          <Text style={{fontSize: 50}}>+</Text>
-        </TouchableOpacity>
       <TouchableOpacity
           style={styles.contractorBtn}
           onPress={() => navigation.navigate('RequestFormScreen', {
             name: contractor.name
           })}
           >
+            {
+            (!added)
+              ?
+            <TouchableOpacity onPress={()=> addFavorite(contractor,added)}>
+              <Text style={{fontSize: 50, fontWeight:'bold'}}>+</Text>
+            </TouchableOpacity>
+              :
+            <Text style={{opacity:0, fontSize:50}}>+</Text>
+          }
           <View >
           {(function(){
             switch (params.type) {

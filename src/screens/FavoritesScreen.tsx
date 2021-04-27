@@ -5,31 +5,35 @@ import { FavoritesContext } from '../context/FavoritesContext';
 
 
 
-export const FavoritesScreen = () => {
+export const FavoritesScreen = ({route}:any) => {
 
+  const {removeFromFavorites, added} = useContext(FavoritesContext)
   const navigation = useNavigation()
-
   const {myFavorites} = useContext(FavoritesContext)
-  console.log(myFavorites);
+
   return (
     <View style={styles.container}>
-      <View>
+
         {
         myFavorites.map(fav =>
           <TouchableOpacity
+          key={fav.id}
           style={styles.contractorBtn}
           onPress={() => navigation.navigate('RequestFormScreen', {
             name: fav.name
           })}
           >
-            <Image style={styles.favLogo} source={require('../assets/images/blackStarIcon.png')}></Image>
-            <View style={styles.companyDetails}>
+            <TouchableOpacity onPress={()=> removeFromFavorites(fav,added)}>
+              <Text style={{fontSize: 80, fontWeight:'bold', top:-50}}>-</Text>
+            </TouchableOpacity>
+          <Image style={styles.btnLogo} source={require('../assets/images/blackStarIcon.png')}/>
+          <View style={styles.companyDetails}>
             <Text style={styles.companyName}>{fav.name}</Text>
-            <Text style={styles.rating}>{fav.rating}/5</Text>
-            </View>
-          </TouchableOpacity>)
+            <Text style={styles.rating} >{fav.rating}/5</Text>
+          </View>
+          </TouchableOpacity>
+       )
       }
-    </View>
     </View>
   )
 }
@@ -39,10 +43,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#333232'
   },
+
   contractorBtn: {
     justifyContent: 'space-between',
     flexDirection: 'row',
-    backgroundColor: '#FFAA2B',
+    backgroundColor: '#ff4757',
     borderWidth: 5,
     borderColor: '#ecf0f1',
     borderRadius: 50,
@@ -54,25 +59,20 @@ const styles = StyleSheet.create({
   companyDetails: {
     justifyContent: 'space-between',
     flexShrink: 1
-
   },
 
   btnLogo: {
     alignSelf:'center',
-    height: 140,
-    width:140
-  },
-
-  favLogo: {
-    width: 60,
-    height:60
+    height: 110,
+    width:110,
+    marginLeft: 10
   },
 
 
   companyName: {
-    // flex: 1,
+    flex: 1,
     flexWrap: 'wrap',
-    fontSize: 25,
+    fontSize: 30,
     fontFamily: 'ZenDots-Regular',
     width: '100%',
     textAlign: 'center',
@@ -90,3 +90,20 @@ const styles = StyleSheet.create({
   }
 
 });
+
+{/* <TouchableOpacity
+key={fav.id}
+style={styles.contractorBtn}
+onPress={() => navigation.navigate('RequestFormScreen', {
+  name: fav.name
+})}
+>
+ <TouchableOpacity onPress={()=> removeFromFavorites(fav,added)}>
+    <Text style={{fontSize: 80}}>-</Text>
+  </TouchableOpacity>
+  <Image style={styles.favLogo} source={require('../assets/images/blackStarIcon.png')}/>
+  <View style={styles.companyDetails}>
+  <Text style={styles.companyName}>{fav.name}</Text>
+  <Text style={styles.rating}>{fav.rating}/5</Text>
+  </View>
+</TouchableOpacity> */}
