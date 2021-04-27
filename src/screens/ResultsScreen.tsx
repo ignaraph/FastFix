@@ -41,7 +41,6 @@ export const ResultsScreen = ({route}:any, {navigation}:Props) => {
   }
 
   const sortByRating = (): void => {
-    console.log(sortContractor);
   if(!sortContractor){
     setSortContractor(true)
   } else {

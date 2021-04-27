@@ -68,8 +68,9 @@ export const RequestFormScreen = ({route, navigation}:Props) => {
         <Text style={styles.formTitle}>Upload an image or video of the issue</Text>
         <TouchableOpacity
         onPress={takePhoto}
+        style={styles.cameraBtn}
         >
-        <Image style={styles.cameraBtn} source={require('../assets/images/testCamera1.png')}/>
+        <Image style={{width:90, height:90, alignSelf:'center'}}  source={require('../assets/images/testCamera2.png')}/>
         </TouchableOpacity>
         <TouchableOpacity
         onPress={filmVideo}
@@ -145,7 +146,8 @@ const styles = StyleSheet.create({
       marginHorizontal: 10,
       borderColor: '#ecf0f1',
       backgroundColor: 'orange',
-      padding: 20
+      padding: 20,
+      justifyContent:'center'
     },
 
     videoCameraBtn: {
@@ -161,7 +163,7 @@ const styles = StyleSheet.create({
     submitContainer: {
       justifyContent: 'center',
       alignItems: 'center',
-      marginVertical: 30,
+      marginVertical: 20,
     },
 
     submitBtn: {
