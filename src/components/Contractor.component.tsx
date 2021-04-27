@@ -10,7 +10,6 @@ export const ContractorComponent = ({params, contractor, added}:any) => {
   const navigation =  useNavigation()
   //Making use of the addToFavorites function from context
   let {addToFavorites, removeFromFavorites} = useContext(FavoritesContext)
-  console.log(added);
   const addFavorite = (contractor:Contractor,added:boolean) => {
     addToFavorites(contractor,added)
   }
@@ -65,16 +64,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFAA2B',
     borderWidth: 5,
     borderColor: '#ecf0f1',
-    borderRadius: 50,
-    marginVertical: 10,
-    marginHorizontal: 10,
-    padding: 20,
+    marginVertical: 25,
+    marginHorizontal: 25,
+    padding: 10,
   },
 
   companyDetails: {
     justifyContent: 'space-between',
     flexShrink: 1
-
   },
 
   btnLogo: {
@@ -85,11 +82,8 @@ const styles = StyleSheet.create({
 
 
   companyName: {
-    flex: 1,
-    flexWrap: 'wrap',
-    fontSize: 30,
+    fontSize: 27,
     fontFamily: 'ZenDots-Regular',
-    width: '100%',
     textAlign: 'center',
   },
 

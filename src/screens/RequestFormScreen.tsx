@@ -57,7 +57,7 @@ export const RequestFormScreen = ({route, navigation}:Props) => {
       <Text style={styles.imageFeedback}>
         Upload Succesful!
       </Text>
-      <Image style={styles.imgFeedback} source={require('../assets/images/feedback.jpg')}/>
+      <Image style={styles.imgFeedback} source={require('../assets/images/greenTick.png')}/>
       <TouchableOpacity
         onPress={cancelUpload}>
         <Text style={styles.cancelText}>Cancel Upload</Text>
@@ -69,12 +69,12 @@ export const RequestFormScreen = ({route, navigation}:Props) => {
         <TouchableOpacity
         onPress={takePhoto}
         >
-        <Image style={styles.cameraBtn} source={require('../assets/images/cameraIcon.jpg')}/>
+        <Image style={styles.cameraBtn} source={require('../assets/images/testCamera1.png')}/>
         </TouchableOpacity>
         <TouchableOpacity
         onPress={filmVideo}
         >
-        <Image style={styles.cameraBtn} source={require('../assets/images/videoCameraIcon2.jpg')}/>
+        <Image style={styles.videoCameraBtn} source={require('../assets/images/finalVideoCamera.png')}/>
         </TouchableOpacity>
       </View>
       }
@@ -138,11 +138,24 @@ const styles = StyleSheet.create({
     },
 
     cameraBtn: {
-      width: 125,
-      height: 125,
-      borderWidth: 20,
+      width: 100,
+      height: 100,
+      borderWidth: 5,
       borderRadius: 50,
       marginHorizontal: 10,
+      borderColor: '#ecf0f1',
+      backgroundColor: 'orange',
+      padding: 20
+    },
+
+    videoCameraBtn: {
+      width: 100,
+      height: 100,
+      borderWidth: 5,
+      borderRadius: 50,
+      marginHorizontal: 10,
+      borderColor: '#ecf0f1',
+      backgroundColor: 'orange'
     },
 
     submitContainer: {
@@ -153,7 +166,6 @@ const styles = StyleSheet.create({
 
     submitBtn: {
       fontSize: 30,
-      borderRadius: 30,
       backgroundColor: '#FFAA2B',
       padding: 20,
       borderColor: '#ecf0f1',
@@ -170,6 +182,7 @@ const styles = StyleSheet.create({
 
     imageFeedback: {
       marginTop: 10,
+      marginBottom: 15,
       fontSize: 40,
       color: '#FFAA2B',
       fontFamily: 'ZenDots-Regular'
@@ -185,13 +198,13 @@ const styles = StyleSheet.create({
     cancelText: {
       marginTop: 30,
       fontSize: 30,
-      borderRadius: 30,
       backgroundColor: '#F65A76',
       padding: 20,
       borderColor: '#ecf0f1',
       borderWidth: 4,
       textAlign: 'center',
-      fontFamily: 'ZenDots-Regular'
+      fontFamily: 'ZenDots-Regular',
+      paddingHorizontal: 35,
     }
 
 

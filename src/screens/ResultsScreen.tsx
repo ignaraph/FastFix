@@ -3,7 +3,7 @@ import { Contractor, ContractorInitialState } from '../interfaces/contractor';
 import { StackScreenProps } from '@react-navigation/stack';
 import { ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import { ContractorComponent } from '../components/Contractor.component';
-import { Image, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { FavoritesContext } from '../context/FavoritesContext';
 
 interface ResultsParams {
@@ -53,8 +53,8 @@ export const ResultsScreen = ({route}:any, {navigation}:Props) => {
     <ScrollView style={{backgroundColor: '#333232'}}>
       <TouchableOpacity
         onPress={sortByRating}
-        style={{justifyContent: 'flex-end', flexDirection:'row', marginRight: 10}}>
-      <Image style={{width:60, height:60}} source={require('../assets/images/sortIcon.jpg')}/>
+        style={styles.sortBtn}>
+      <Image style={{width:80, height:80}} source={require('../assets/images/sortIcon.png')}/>
       </TouchableOpacity>
       {(sortContractor === false)
         ?
@@ -72,3 +72,15 @@ export const ResultsScreen = ({route}:any, {navigation}:Props) => {
     </ScrollView>
   )
 }
+
+const styles = StyleSheet.create({
+  sortBtn: {
+    borderWidth:4,
+    backgroundColor:'#FFAA2B',
+    width:90,
+    right: -380,
+    borderRadius:30,
+    marginVertical:10,
+    borderColor: '#ecf0f1'
+  }
+});

@@ -50,8 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ff4757',
     borderWidth: 5,
     borderColor: '#ecf0f1',
-    borderRadius: 50,
-    marginVertical: 10,
+    marginVertical: 20,
     marginHorizontal: 10,
     padding: 20,
   },
@@ -72,7 +71,7 @@ const styles = StyleSheet.create({
   companyName: {
     flex: 1,
     flexWrap: 'wrap',
-    fontSize: 30,
+    fontSize: 27,
     fontFamily: 'ZenDots-Regular',
     width: '100%',
     textAlign: 'center',
@@ -90,20 +89,3 @@ const styles = StyleSheet.create({
   }
 
 });
-
-{/* <TouchableOpacity
-key={fav.id}
-style={styles.contractorBtn}
-onPress={() => navigation.navigate('RequestFormScreen', {
-  name: fav.name
-})}
->
- <TouchableOpacity onPress={()=> removeFromFavorites(fav,added)}>
-    <Text style={{fontSize: 80}}>-</Text>
-  </TouchableOpacity>
-  <Image style={styles.favLogo} source={require('../assets/images/blackStarIcon.png')}/>
-  <View style={styles.companyDetails}>
-  <Text style={styles.companyName}>{fav.name}</Text>
-  <Text style={styles.rating}>{fav.rating}/5</Text>
-  </View>
-</TouchableOpacity> */}

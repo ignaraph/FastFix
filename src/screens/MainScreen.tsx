@@ -90,13 +90,13 @@ const styles = StyleSheet.create({
   image: {
     width: 400,
     height: 400,
+    marginTop: 20,
   },
 
   inputs: {
     marginTop: 10,
     borderWidth: 4,
-    width: 300,
-    borderRadius: 50,
+    width: 400,
     textAlign: 'center',
     fontSize: 20,
     backgroundColor: '#FFAA2B',
@@ -120,7 +120,6 @@ const styles = StyleSheet.create({
   },
 
   loginBtn: {
-    borderRadius: 50,
     width: 250,
     borderWidth: 4,
     fontSize: 25,
@@ -133,16 +132,15 @@ const styles = StyleSheet.create({
   },
 
   signInButton: {
-    width: 250,
-    height: 50,
-    marginTop: 20,
+    width: 400,
+    height: 60,
+    marginTop: 40,
   },
 
   orText: {
     fontSize: 30,
     fontFamily: "FasterOne-Regular",
     color: '#FFAA2B'
-
   }
 
 });
