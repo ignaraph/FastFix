@@ -3,9 +3,6 @@ import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-
-
-
 export const MenuScreen = () => {
 
   const [favorites, setFavorites] = useState([])

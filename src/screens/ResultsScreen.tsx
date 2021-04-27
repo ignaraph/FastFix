@@ -3,18 +3,16 @@ import { Contractor, ContractorInitialState } from '../interfaces/contractor';
 import { StackScreenProps } from '@react-navigation/stack';
 import { ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import { ContractorComponent } from '../components/Contractor.component';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet} from 'react-native';
 import { FavoritesContext } from '../context/FavoritesContext';
 
 interface ResultsParams {
   type: string;
-  favorites: [];
-  setFavorites: any;
 }
 
 interface Props extends StackScreenProps<any, any>{};
 
-export const ResultsScreen = ({route}:any, {navigation}:Props) => {
+export const ResultsScreen = ({route}:any) => {
 
   let {myFavorites} = useContext(FavoritesContext)
 
@@ -32,7 +30,7 @@ export const ResultsScreen = ({route}:any, {navigation}:Props) => {
   // 192.168.1.194 This is Codeworks
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://192.168.1.194:3002/${params.type}`)
+      const response = await fetch(`http://192.168.1.24:3002/${params.type}`)
       const result = await response.json();
       setContractor(result)
     } catch (error) {

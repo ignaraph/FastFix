@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { View, StyleSheet, Image, Animated, Text } from 'react-native';
+import React from 'react'
+import { View, StyleSheet, Animated, Text } from 'react-native';
 
 export const RequestSubmittedScreen = () => {
 

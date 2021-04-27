@@ -1,6 +1,4 @@
-import React, { createContext, useReducer, useState } from "react"
-import { Text, View } from "react-native";
-// import { favoriteReducer } from './favoriteReducer';
+import React, { createContext, useState } from "react"
 import { Contractor } from '../interfaces/contractor';
 
 
@@ -12,17 +10,10 @@ export interface FavoritesContextProps {
   added: boolean;
 }
 
-// const myFavorites: Contractor[] = [];
 const added = false;
 
 const favoriteConstructors: FavoritesContextProps = {
   myFavorites: [] as Contractor[],
-  // addToFavorites: (contractor: Contractor, added:boolean) => {
-  //   myFavorites.push(contractor)
-  // },
-  // removeFromFavorites: (contractor:Contractor, added:boolean) => {
-  //   myFavorites.filter(item => item !== contractor)
-  // },
   addToFavorites: () => {},
   removeFromFavorites: () => {},
   added: added,
@@ -37,19 +28,11 @@ export const FavoriteProviders = ({children}: any) => {
   const [myFavorites, setMyFavorites] = useState<Contractor[]>([])
 
   const addToFavorites = (contractor:Contractor, added:boolean) => {
-    // myFavorites.push(contractor)
     setMyFavorites(oldFavorites => [...oldFavorites, contractor])
     added = !added
-    return (
-      <View>
-        <Text>Added to Favorites</Text>
-      </View>
-    )
   }
 
   const removeFromFavorites = (contractor:Contractor, added:boolean) => {
-    // console.log(`This is myFavs : ${myFavorites}`);
-    // console.log(`This is contractor : ${contractor}`);
     setMyFavorites(oldFavorites => {
     return oldFavorites.filter(especialist => {
         return especialist.name !== contractor.name
@@ -59,7 +42,6 @@ export const FavoriteProviders = ({children}: any) => {
   }
 
   return (
-    //Sending the information to all child components
     <FavoritesContext.Provider value={{
       myFavorites,
       addToFavorites,

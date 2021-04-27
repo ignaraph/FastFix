@@ -73,6 +73,7 @@ export const MainScreen = ({navigation}: Props) => {
       onPress={() => navigation.navigate('MenuScreen')} >
         <Text style={styles.loginBtn}>Login</Text>
       </TouchableOpacity>
+      <Text style={{fontSize:15, color:'#FFAA2B', marginTop:-40, marginBottom:20}}>Don't have an account? Register here</Text>
       <Text style={styles.orText}>
         Or
       </Text>

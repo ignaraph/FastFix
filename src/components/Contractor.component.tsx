@@ -14,8 +14,6 @@ export const ContractorComponent = ({params, contractor, added}:any) => {
     addToFavorites(contractor,added)
   }
 
-  // const addedInput = addToFavorites(contractor)
-
 
   return (
       <View>

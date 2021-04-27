@@ -8,7 +8,6 @@ import { FavoritesScreen } from '../screens/FavoritesScreen';
 import { RequestSubmittedScreen } from '../screens/RequestSubmittedScreen';
 
 const Stack = createStackNavigator()
-/*headerMode='none'*/
 export const StackNavigator = () => {
   return (
     <Stack.Navigator headerMode='none'>

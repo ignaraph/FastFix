@@ -1,7 +1,7 @@
 import React,{ useState} from 'react'
 import { Text, View, StyleSheet, Image } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import {TouchableOpacity } from 'react-native-gesture-handler';
+import {launchCamera} from 'react-native-image-picker';
 import Textarea from 'react-native-textarea';
 import { StackScreenProps } from '@react-navigation/stack';
 
@@ -11,7 +11,6 @@ interface Props extends StackScreenProps<any, any> {};
 interface MenuParams {
   name: string;
 }
-
 
 export const RequestFormScreen = ({route, navigation}:Props) => {
 
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#FFAA2B',
     },
     textarea: {
-      textAlignVertical: 'top',  // hack android
+      textAlignVertical: 'top',
       height: 170,
       fontSize: 30,
       color: '#333',
@@ -208,6 +207,4 @@ const styles = StyleSheet.create({
       fontFamily: 'ZenDots-Regular',
       paddingHorizontal: 35,
     }
-
-
 });
