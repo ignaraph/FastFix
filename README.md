@@ -1,6 +1,7 @@
 # FastFix
-
-![logotest2](https://user-images.githubusercontent.com/70608198/119799101-0de31300-bedc-11eb-98ac-a4ca3e21e8a4.png)             
+<p align="center">
+  <img src="/src/assets/images/logotest2.png">
+</p>
 
 
 
