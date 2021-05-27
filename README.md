@@ -16,6 +16,14 @@ All of these problems are convered by FastFix, just log in to your user account,
   <img src="/src/assets/images/FastFix1.png"> 
   <img src ="/src/assets/images/FastFix4.png">
 <p>
+  
+# Features
+  <ul>
+    <li>Search for different types of contractors</li> 
+    <li>Sort them by their rating</li> 
+    <li>Add favorite contractors to a favorites list</li> 
+    <li>Add media files (images or video) to submit a request</li>
+  </ul>
 
 
 
