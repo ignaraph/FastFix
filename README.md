@@ -25,11 +25,21 @@ All of these problems are convered by FastFix, just log in to your user account,
     <li>Add media files (images or video) to submit a request</li>
   </ul>
 
-
-
-
-
 ## Tech Stack
+
+<table>
+  <tr>
+    <th>Tech Stack</th>
+    <th>React Native</th>
+    <th>Typescript</th>
+    <th>NodeJS</th>
+    <th>Express</th>
+    <th>PostgreSQL</th>
+  </tr>
+   <tr>
+  </tr>
+ </table>
+
 ![Daco_2007563](https://user-images.githubusercontent.com/70608198/119220701-127a8680-baec-11eb-9d47-ad2f7b755647.png)
 ![icons8-typescript-48](https://user-images.githubusercontent.com/70608198/119220802-92a0ec00-baec-11eb-91cd-1a8e0f706b5c.png)
 ![pngfind com-pc-master-race-png-1363736](https://user-images.githubusercontent.com/70608198/119220898-f88d7380-baec-11eb-8808-936c5efa7e7f.png)
