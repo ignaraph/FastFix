@@ -14,8 +14,8 @@ All of these problems are convered by FastFix, just log in to your user account,
 # Screenshots 
 <p align="center">
   <img src="/src/assets/images/FastFix1.png"> 
+  <img src ="/src/assets/images/FastFix2.png">
 <p>
-![fastFix1](https://user-images.githubusercontent.com/70608198/119799637-8c3fb500-bedc-11eb-9078-9815f425814b.png)
 
 
 
