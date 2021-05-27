@@ -1,12 +1,17 @@
 # FastFix
 
-FastFix is an app the makes finding reliable traders quick and easy! Have you ever had to endure the pain of trying to get a trusted contractor?
-Someone whose work has been tested and graded by other people? This can really be a struggle some times, specially when you need someone fast and you dont have much time
-because of having to pay attention to work, daily chores, friends, family... the list goes on and on. 
+![logotest2](https://user-images.githubusercontent.com/70608198/119799101-0de31300-bedc-11eb-98ac-a4ca3e21e8a4.png)
 
-All of these problems are convered by FastFix, just log in to your user account, select the category of traders you are looking for, sort them by ratings, pick the one you like 
-and, after sending a small description of the issue you are having and optionally attaching a  picture or video of the problem you will soon be contacted by the proffessional in order to 
-arrange an appointment. 
+
+
+FastFix is an app the makes finding reliable traders quick and easy! 
+
+Have you ever had to endure the pain of trying to get a trusted contractor? Someone whose work has been tested and evaluated by other people? This can really be a struggle some times, specially when you need someone fast and you dont have much time because of other demands such as work, daily chores, friends, family... the list goes on and on. 
+
+All of these problems are convered by FastFix, just log in to your user account, select the category of traders you are looking for, sort them by ratings, pick the one you like and, after sending a small description of the issue you are having and optionally attaching a picture or video of the problem you will soon be contacted by the proffessional in order to arrange an appointment and get a fast fix to your problem. 
+
+# Screenshots 
+![fastFix1](https://user-images.githubusercontent.com/70608198/119799637-8c3fb500-bedc-11eb-9078-9815f425814b.png)
 
 
 
