@@ -14,7 +14,7 @@ All of these problems are convered by FastFix, just log in to your user account,
 # Screenshots 
 <p align="center">
   <img src="/src/assets/images/FastFix1.png"> 
-  <img src ="/src/assets/images/FastFix2.png">
+  <img src ="/src/assets/images/FastFix4.png">
 <p>
 
 
