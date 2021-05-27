@@ -12,6 +12,9 @@ Have you ever had to endure the pain of trying to get a trusted contractor? Some
 All of these problems are convered by FastFix, just log in to your user account, select the category of traders you are looking for, sort them by ratings, pick the one you like and, after sending a small description of the issue you are having and optionally attaching a picture or video of the problem you will soon be contacted by the proffessional in order to arrange an appointment and get a fast fix to your problem. 
 
 # Screenshots 
+<p align="center">
+  <img src="/src/assets/images/FastFix1.png"> 
+<p>
 ![fastFix1](https://user-images.githubusercontent.com/70608198/119799637-8c3fb500-bedc-11eb-9078-9815f425814b.png)
 
 
