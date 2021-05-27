@@ -29,6 +29,7 @@ All of these problems are convered by FastFix, just log in to your user account,
 ## Tech Stack
 
 <table>
+  <thead>
   <tr>
     <th>React Native</th>
     <th>Typescript</th>
@@ -36,12 +37,15 @@ All of these problems are convered by FastFix, just log in to your user account,
     <th>Express</th>
     <th>PostgreSQL</th>
   </tr>
-    <th><img height="50px" width="50px" src="src/assets/images/react-original.svg"></th>
-    <th><img height="50px" width="50px" src="src/assets/images/typescript-original.svg"></th>
-    <th><img height="50px" width="50px" src="src/assets/images/nodejs-original.svg"></th>
-    <th><img height="50px" width="50px" src="src/assets/images/express-original.svg"></th>
-    <th><img height="50px" width="50px" src="src/assets/images/postgresql-original.svg"></th>
+  </thead>
+  <tbody>
    <tr>
-  </tr>
+    <td align="center"><img height="50px" width="50px" src="src/assets/images/react-original.svg"></td>
+     <td align="center"><img height="50px" width="50px" src="src/assets/images/typescript-original.svg"></td>
+     <td align="center"><img height="50px" width="50px" src="src/assets/images/nodejs-original.svg"></td>
+     <td align="center"><img height="50px" width="50px" src="src/assets/images/express-original.svg"></td>
+     <td align="center"><img height="50px" width="50px" src="src/assets/images/postgresql-original.svg"></td>
+   </tr>
+  </tbody>
  </table>
  
