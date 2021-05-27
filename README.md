@@ -34,18 +34,19 @@ All of these problems are convered by FastFix, just log in to your user account,
 
 <table>
   <tr>
-    <th>Tech Stack</th>
     <th>React Native</th>
     <th>Typescript</th>
     <th>NodeJS</th>
     <th>Express</th>
     <th>PostgreSQL</th>
   </tr>
+    <th>
+<img height="50px" width="50px" src="src/assets/images/react-original.svg">
+ </th>
    <tr>
   </tr>
  </table>
  
- <i class="devicon-react-original-wordmark colored"></i>
 
 
 ![Daco_2007563](https://user-images.githubusercontent.com/70608198/119220701-127a8680-baec-11eb-9d47-ad2f7b755647.png)
