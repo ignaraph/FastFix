@@ -1,7 +1,3 @@
-<head>
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
-</head>
-<body>
 
 # FastFix
 <p align="center">
@@ -40,17 +36,12 @@ All of these problems are convered by FastFix, just log in to your user account,
     <th>Express</th>
     <th>PostgreSQL</th>
   </tr>
-    <th>
-<img height="50px" width="50px" src="src/assets/images/react-original.svg">
- </th>
+    <th><img height="50px" width="50px" src="src/assets/images/react-original.svg"></th>
+    <th><img height="50px" width="50px" src="src/assets/images/typescript-original.svg"></th>
+    <th><img height="50px" width="50px" src="src/assets/images/nodejs-original.svg"></th>
+    <th><img height="50px" width="50px" src="src/assets/images/express-original.svg"></th>
+    <th><img height="50px" width="50px" src="src/assets/images/postgresql-original.svg"></th>
    <tr>
   </tr>
  </table>
  
-
-
-![Daco_2007563](https://user-images.githubusercontent.com/70608198/119220701-127a8680-baec-11eb-9d47-ad2f7b755647.png)
-![icons8-typescript-48](https://user-images.githubusercontent.com/70608198/119220802-92a0ec00-baec-11eb-91cd-1a8e0f706b5c.png)
-![pngfind com-pc-master-race-png-1363736](https://user-images.githubusercontent.com/70608198/119220898-f88d7380-baec-11eb-8808-936c5efa7e7f.png)
-![postgresql-inc-logo](https://user-images.githubusercontent.com/70608198/119220838-bebc6d00-baec-11eb-941b-962800aecc0e.png)
-</body>
